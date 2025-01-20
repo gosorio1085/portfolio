@@ -1,0 +1,55 @@
+---
+const personalImageAlt = "Gabriela Alejandra";
+import { Image } from "astro:assets";
+import imagenGaby from "../images/gabyfoto.png";
+import Badge from "../components/Badge.astro";
+import GitHubIcon from "../components/icons/GitHub.astro";
+import LinkedInIcon from "../components/icons/LinkedIn.astro";
+import MailIcon from "../components/icons/Mail.astro";
+import SocialPill from "../components/SocialPill.astro";
+---
+
+<div class="max-w-xl">
+  <div class="flex gap-4 mb-4">
+    <Image
+      class="rounded-full size-24 mb-4"
+      src={imagenGaby}
+      alt={personalImageAlt}
+    />
+    <a
+      href="https://www.linkedin.com/in/gabriela-osorio-795814199"
+      target="_blank"
+      rel="noopener"
+      class="flex items-center transition md:justify-center md:hover:scale-105"
+    >
+      <Badge>Disponible para trabajar</Badge>
+    </a>
+  </div>
+  <h1
+    class="text-white text-3xl md:text-4xl lg:text-5xl font-bold flex flex-row gap-x-4 pb-6 lg:pb-10"
+  >
+    Hey, soy Gabriela
+  </h1>
+  <p
+    class="mt-6 text-xl text-gray-800 dark:[&>strong]:text-yellow-200 [&>strong]:text-yellow-500 [&>strong]:font-semibold dark:text-gray-300"
+  >
+    Licenciada en Administración Comercial y Desarrollador Web Training. <strong
+      >Habilidades Junior.</strong
+    >De Valencia, Venezuela💛💙❤️Expandiendo mis conocimientos y capacidades,
+    para un mejor servicio.
+  </p>
+  <nav class="flex flex-wrap gap-4 mt-8">
+    <SocialPill href="https://github.com/gosorio1085">
+      <GitHubIcon class="size-4 md:size-6" />
+      GitHub
+    </SocialPill>
+    <SocialPill href="https://www.linkedin.com/in/gabriela-osorio-795814199">
+      <LinkedInIcon class="size-4 md:size-6" />
+      LinkedIn
+    </SocialPill>
+    <SocialPill href="mailto:g.osoriow1085@gmail.com">
+      <MailIcon class="size-4 md:size-6" />
+      Contáctame
+    </SocialPill>
+  </nav>
+</div>
