@@ -18,7 +18,9 @@ const currentYear = new Date().getFullYear();
       class="flex flex-wrap items-center mt-3 text-sm font-medium dark:text-white/90 sm:mt-0"
     >
       <li>
-        <a href="/#sobre-mi" class="hover:underline me-4 md:me-6">Sobre mí</a>
+        <button id="scrollToTop1" class="hover:underline me-4 md:me-6"
+          >Volver arriba</button
+        >
       </li>
       <li>
         <a
@@ -30,3 +32,16 @@ const currentYear = new Date().getFullYear();
     </ul>
   </div>
 </footer>
+
+<script>
+  // En un archivo JavaScript separado o en el mismo componente (si usas JavaScript en línea)
+
+  const scrollToTopButton = document.getElementById("scrollToTop1");
+
+  scrollToTopButton?.addEventListener("click", () => {
+    window.scrollTo({
+      top: 0,
+      behavior: "smooth",
+    });
+  });
+</script>
